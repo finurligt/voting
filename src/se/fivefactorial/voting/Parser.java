@@ -28,6 +28,7 @@ public class Parser {
 			String firstname = data[settings.getColFirstName()].trim();
 			String lastname = data[settings.getColLastName()].trim();
 			String guild = data[settings.getColGuild()].trim();
+			if (guild.equals("V")) continue;
 
 			Candidate candidate = new Candidate(firstname, lastname, Guild.valueOf(guild));
 			candidate = candidateList.add(candidate);
