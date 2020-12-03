@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import se.fivefactorial.voting.data.BallotList;
-import se.fivefactorial.voting.data.Candidate;
-import se.fivefactorial.voting.data.CandidateList;
-import se.fivefactorial.voting.data.Result;
+import se.fivefactorial.voting.data.*;
 import se.fivefactorial.voting.util.CandidateComparator;
 
 public class TLTHVoting {
@@ -113,6 +110,21 @@ public class TLTHVoting {
 
 		parsing();
 		preprocessing();
+		for (Ballot b : ballotList.ballots) {
+			StringBuilder bob = new StringBuilder();
+			bob.append(b.id);
+			bob.append(": ");
+
+			Collections.sort(b.votes);
+			for (Vote v : b.votes) {
+				//bob.append(v.toString());
+				//bob.append(", ");
+
+			}
+			bob.append(b.votes);
+			//if (b.votes.size()==27)System.out.println(bob.toString());
+			System.out.println(bob.toString());
+		}
 		Result result = voting();
 		result(result);
 	}

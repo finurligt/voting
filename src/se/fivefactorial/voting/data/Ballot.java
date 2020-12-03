@@ -5,8 +5,8 @@ import java.util.Collections;
 
 public class Ballot {
 
-	private String id;
-	private ArrayList<Vote> votes;
+	public String id;
+	public ArrayList<Vote> votes;
 	private int i;
 	private double weight;
 

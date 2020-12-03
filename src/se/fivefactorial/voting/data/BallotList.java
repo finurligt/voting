@@ -3,7 +3,7 @@ package se.fivefactorial.voting.data;
 import java.util.ArrayList;
 
 public class BallotList {
-	private ArrayList<Ballot> ballots;
+	public ArrayList<Ballot> ballots;
 
 	public BallotList() {
 		ballots = new ArrayList<>();
